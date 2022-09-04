@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+body {
+    height: 100vh;
+    /* background-color: #32ffd8; */
+    background-color: #bb9041;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+/* .timer {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #32ffd8;
+    background-image: conic-gradient(#32ffd8 var(--g), transparent);
+    animation: 2s linear timerGradiant2;
+} */
+header {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 16px;
+}
+.departures {
+    background-color: #000;
+    color: rgb(243,243,243);
+    border-radius: 16px;
+    padding: 16px;
+}
+.departures table {
+    background: #222222;
+    text-align: left;
+    font-size: 25px;
+}
+.departures table .flip:not(:empty) {
+    padding: 1px;
+}
+.departures table .flip {
+    background-color: #000;
+    border: 2px solid #222222;
+    float: left;
+    border-radius: 3px;
+    animation: 0.7s cubic-bezier(.41,.51,.13,.93) flipping;
+    transform-style: preserve-3d;
+    transform-origin: 50% 10px;
+}
+@keyframes flipping {
+    0% {
+        transform: perspective(40px) rotateX(90deg);
+    }
+    20% {
+        transform: perspective(40px) rotateX(87deg);
+    }
+    30% {
+        transform: perspective(40px) rotateX(70deg);
+    }
+    40% {
+        transform: perspective(40px) rotateX(50deg);
+    }
+    50% {
+        transform: perspective(40px) rotateX(10deg);
+    }
+    60% {
+        transform: perspective(40px) rotateX(0deg);
+    }
+    70% {
+        transform: perspective(40px) rotateX(10deg);
+    }
+    80% {
+        transform: perspective(40px) rotateX(0deg);
+    }
+    90% {
+        /* transform: perspective(40px) rotateX(0deg); */
+    }
+    100% {
+        /* transform: perspective(40px) rotateX(5deg); */
+    }
+}
+#time {
+    width: 125px;
+}
+#destination {
+    width: 215px;
+}
+#flight {
+    width: 150px;
+}
+#gate {
+    width: 100px;
+}
+#ramarks {
+    width: 210px;
+}
